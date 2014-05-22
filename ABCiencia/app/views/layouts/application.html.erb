@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ABCiencia</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  	<link type="text/css" rel="stylesheet" media="all" href="/assets/aggregator.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="/assets/node.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="/assets/defaults.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="/assets/system.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="/assets/system-menus.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="/assets/user.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="/assets/ckeditor.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="/assets/style.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="/assets/inner.css" />
+	<link type="text/css" rel="stylesheet" media="print" href="/assets/print.css" />
+	<script type="text/javascript" src="/assets/jquery.js"></script>
+</head>
+<body class="sidebar-left">
+
+<%= yield %>
+
+</body>
+</html>

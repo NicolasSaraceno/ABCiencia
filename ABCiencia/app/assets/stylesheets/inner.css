@@ -1,0 +1,19 @@
+
+.itemMenu a:link, .itemMenu a:visited {
+	display: block;
+	width: 100%;
+	padding: 2px 0px;
+	padding-left: 5px;
+	padding-right: 9px;
+	font-weight: bold;
+	color: #18583d;
+	border-bottom: 1px #18583d solid;
+}
+.itemMenu a:hover {
+	display: block;
+	width: 100%;
+	background-color: #52bf90;
+	color: #000000;
+	text-decoration: none;
+	filter: alpha(opacity=75); opacity: .75;
+}
