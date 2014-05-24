@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140521212236) do
+ActiveRecord::Schema.define(version: 20140524204300) do
 
   create_table "admins", force: true do |t|
     t.string   "password"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20140521212236) do
     t.datetime "updated_at"
     t.string   "article"
     t.integer  "category_id"
+    t.string   "super_link"
   end
 
   create_table "categories", force: true do |t|

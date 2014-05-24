@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   def category
 
   		@category = Category.find_by_nombre(params[:category])
-
-  end
-
+  		@articles_for_category = @category.articles
+  	end
 end
+
