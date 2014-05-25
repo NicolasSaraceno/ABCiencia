@@ -78,7 +78,9 @@ google_ad_height = 15;
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 </div></div>
-<p><!-- google_ad_section_start --><p class="menuloco"><a href="/medicina"><u>Medicina general</u></a>|<a href="/medicina/psiquiatria">Psiquiatr&iacute;a</a>|<a href="/medicina/videos">Videos</a> </p>
+<% if @category.nombre == "Medicina" %>
+	<p><!-- google_ad_section_start --><p class="menuloco"><a href="/medicina"><u>Medicina general</u></a>|<a href="/medicina/psiquiatria">Psiquiatr&iacute;a</a>|<a href="/medicina/videos">Videos</a> </p>
+<% end %>
 <style type="text/css">
 .menuloco a:link, .menuloco a:visited {
 	padding: 2px 0px;

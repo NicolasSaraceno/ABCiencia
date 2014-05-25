@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   get 'home/index'
+  get '/info' => "home#info"
+  get '/about' => "home#about"
+  get '/licencia' => "home#licencia"
+  get '/contacto' => "home#contacto"
   get '/:category' => "home#category"
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
