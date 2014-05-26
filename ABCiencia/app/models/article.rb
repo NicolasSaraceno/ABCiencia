@@ -15,7 +15,8 @@ class Article < ActiveRecord::Base
 	end
 
 	def add_superlink
-		self.update! :super_link => self.article.split(' ').join('-')
+		c = self.article.gsub(/[^0-9A-Za-z]/, ' ')
+		self.update! :super_link => c.split(' ').join('-')
 	end
 
 
