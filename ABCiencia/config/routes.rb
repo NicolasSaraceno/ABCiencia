@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   get '/contacto' => "home#contacto"
   get '/admin' => "home#admin"
   post '/login' => "admin#login"
-  get '/logout' => "admin#logout"
+  post '/logout' => "admin#logout"
+  post '/create_article' => "article#create_article"
+  post '/create_category' => "category#create_category"
+  post 'erase_article' => "article#erase_article"
+  post '/erase_category' => "category#erase_category"
   get '/:category' => "home#category"
   get '/:category/:super_link' => "home#article"
 

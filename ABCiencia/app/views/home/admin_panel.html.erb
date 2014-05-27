@@ -19,24 +19,43 @@
 
       <div class="clear-block"></br>
 <h3> Agregar articulo </h3></br>
-<%= form_tag do %>
-  <%= label_tag :Autor %>
-  <%= text_field_tag :Autor %> <br/>
-  <%= label_tag :Titulo %>
-  <%= text_field_tag :Titulo %><br/>
-  <%= label_tag :Cuerpo %>
-  <%= text_area_tag :Cuerpo %><br/>
+<%= form_tag ('/create_article') do %>
+  <%= label_tag :Autor %></br>
+  <%= text_field_tag :autor %> <br/>
+  <%= label_tag :Titulo %></br>
+  <%= text_field_tag :titulo %><br/>
+  <%= label_tag :Cuerpo %><br/>
+  <%= text_area_tag :cuerpo %><br/>
   <%= label_tag :Categoria %>
-  <%= select_tag 'categoria', options_from_collection_for_select(Category.all, 'id', 'nombre') %> 
+  <%= select_tag 'categoria', options_from_collection_for_select(Category.all, 'id', 'nombre') %> <br/>
   <%= submit_tag "Create" %>
 <% end %></br>
 
+<h3> Borrar articulo </h3></br>
+<%= form_tag ('/erase_article') do %>
+    <%= select_tag 'articulo', options_from_collection_for_select(Article.all, 'id', 'article') %> <br/>
+    <%= submit_tag "Borrar" %>
+<% end %></br>
+
 <h3> Agregar categoria </h3></br>
-<%= form_tag do %>
+<%= form_tag ('/create_category') do %>
   <%= label_tag :Categoria %>
-  <%= text_field_tag :Categoria %> <br/>
+  <%= text_field_tag :categoria %> <br/>
   <%= submit_tag "Create" %>
  <% end %></br>
+
+ <h3> Borrar Categoria </h3></br>
+<%= form_tag ('/erase_category') do %>
+  <%= label_tag :Categoria %>
+  <%= select_tag 'categoria', options_from_collection_for_select(Category.all, 'id', 'nombre') %> <br/>
+  <%= submit_tag "Borrar" %>
+ <% end %></br>
+
+ <%= form_tag ( '/logout') do %>
+    <%= submit_tag "Logout" %>
+ <% end %></br>
+
+
 
 
           </div>
