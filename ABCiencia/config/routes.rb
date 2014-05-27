@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   get '/about' => "home#about"
   get '/licencia' => "home#licencia"
   get '/contacto' => "home#contacto"
+  get '/admin' => "home#admin"
+  post '/login' => "admin#login"
+  get '/logout' => "admin#logout"
   get '/:category' => "home#category"
+  get '/:category/:super_link' => "home#article"
 
 
   # The priority is based upon order of creation: first created -> highest priority.

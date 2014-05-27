@@ -25,5 +25,10 @@ class HomeController < ApplicationController
 
  end
 
+ def article
+ 	category = Category.find_by_nombre(params[:category])
+ 	@article = Article.where(:category => category, :super_link => params[:super_link]).first
+ end
+ 
 end
 

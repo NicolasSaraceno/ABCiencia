@@ -2,17 +2,17 @@ class Admin < ActiveRecord::Base
 	validates_presence_of :password
 	validates_length_of :password, :minimum => 6, :too_short => "Minimo 6 caracteres"
 	validates_presence_of :nombre 
-	validate :admin_should_be_unique
-	before_save :encrypt_password
+	before_create :admin_should_be_unique
+	#before_save :encrypt_password#
 
-	def login (password, nombre)
-		if self.nombre == nombre and self.password == password 
-			self.login = true
+	def login! (password, nombre)
+		if self.nombre == nombre and self.password == password
+			self.update! :login => true
 		end
 	end
 	
 	def check_login
-		self.Login
+		self.login
 	end
 
 	private

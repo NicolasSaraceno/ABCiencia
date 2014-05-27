@@ -98,7 +98,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </style>
 <hr />
 <% @articles_for_category.each do |a| %>
-<p><a href="#{a.super_link}"><font color="#1b5f42"><b><font size="3" face="arial,helvetica,sans-serif"><%= a.article %></font></b></font></a><br/><%= a.cuerpo %> </p>
+<p><a href='/<%= @category.nombre %>/<%= a.super_link %>'><font color="#1b5f42"><b><font size="3" face="arial,helvetica,sans-serif"><%= a.article %></font></b></font></a><br/><%= a.cuerpo %> </p>
 <% end %>
 <!-- google_ad_section_end --><br class="clear" />
 <div class='adsense adsense_managed'>
